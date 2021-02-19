@@ -57,6 +57,7 @@ body.active {
 }
 
 body.active .home-contents {
+  visibility: hidden;
   animation: up 1s ease;
 }
 
