@@ -36,8 +36,11 @@ Generate a random meal from an API.
 </br>
 </br>
  
+- [Random Meal Generator by me Ivo Pereia on vercel](https://random-recipes.vercel.app/)
  
-## 🚀  <strong>Technologies used</strong>
+</br>
+
+## 🚀 <strong>Technologies used</strong>
 
 - CSS3
 - HTML5
