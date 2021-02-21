@@ -14,7 +14,7 @@ async function getRecipe() {
     const response = await fetch('https://www.themealdb.com/api/json/v1/1/random.php')
     const data = await response.json()
 
-    createMeal(data.meals[0])
+    return createMeal(data.meals[0])
 
   } catch (err) {
     console.error(err)
@@ -56,17 +56,25 @@ function createMeal(meal) {
 function newRecipe() {
   recipeContents.classList.add('newcontent')
 
-  getRecipe()
+  newcontents.disabled = true
+  newcontents.style.cursor = 'not-allowed'
 
   setTimeout(() => {
     recipeContents.classList.remove('newcontent')
 
-  }, 1000)
+    newcontents.style.cursor = 'pointer'
+    newcontents.disabled = false
+
+  }, 2500)
+
+  getRecipe()
 }
 
 function backHome() {
   document.body.classList.remove('active')
   document.body.classList.add('back')
+
+  recipeVideo.src = ''
 
   window.scrollTo(0, 0)
 }
